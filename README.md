@@ -21,7 +21,7 @@ import {Expandible} from "expandible";
 // Later
 
 {/** Toggle */}
-<button onClick={(open) => this.setState({ open: !this.state.open })}>Toggle</button>
+<button onClick={() => this.setState({ open: !this.state.open })}>Toggle</button>
 
 {/** Expandible */}
 <Expandible open={this.state.open}>

@@ -3,6 +3,7 @@
   "version": "0.0.3",
   "description": "Expandible / Collapsible React container",
   "main": "lib/index.js",
+  "typings": "lib/index",
   "scripts": {
     "buildtsc": "tsc -p .",
     "test": "npm run buildtsc",

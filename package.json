@@ -1,6 +1,6 @@
 {
   "name": "expandible",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Expandible / Collapsible React container",
   "main": "lib/index.js",
   "scripts": {

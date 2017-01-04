@@ -1,0 +1,20 @@
+{
+  "name": "expandible",
+  "version": "0.0.0",
+  "description": "Expandible / Collapsible React container",
+  "main": "lib/index.js",
+  "scripts": {
+    "buildtsc": "tsc -p .",
+    "builddocs": "ts-node ./src/docs/main.tsx",
+    "test": "npm run buildtsc && npm run builddocs",
+    "start": "concurrently -k \"npm run buildtsc -- -w\" \"nodemon --watch src --ext ts,tsx --exec npm run builddocs\"",
+    "publishdocs": "ts-node ./scripts/publishdocs.ts"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^0.14.55",
+    "ts-node": "^2.0.0",
+    "typescript": "^2.1.4"
+  }
+}

@@ -1,11 +1,11 @@
 import * as React from 'react';
 
-export type CollapsibleProps = {
+export type ExpandibleProps = {
   open: boolean,
 
   transitionTime?: number,
   easing?: string,
-  classParentString?: string,
+  parentClass?: string,
   triggerWhenOpen?: string | HTMLElement,
   lazyRender?: boolean,
   overflowWhenOpen?: 'hidden' | 'visible' | 'auto' | 'scroll' | 'inherit' | 'initial' | 'unset'
@@ -14,13 +14,13 @@ export type CollapsibleProps = {
  * A container for expandible / collapsible content 
  * Based on https://www.npmjs.com/package/react-collapsible 
  */
-export class Collapsible extends React.PureComponent<CollapsibleProps, {
+export class Expandible extends React.PureComponent<ExpandibleProps, {
   isClosed?: boolean,
   shouldSwitchAutoOnNextCycle?: boolean,
   height?: string | number,
   transition?: string,
   hasBeenOpened?: boolean,
-  overflow?: CollapsibleProps['overflowWhenOpen'],
+  overflow?: ExpandibleProps['overflowWhenOpen'],
 }>{
 
   /**
@@ -36,7 +36,7 @@ export class Collapsible extends React.PureComponent<CollapsibleProps, {
     accordionPosition: 0
   };
 
-  constructor(props: CollapsibleProps) {
+  constructor(props: ExpandibleProps) {
     super(props);
 
     this.state =
@@ -92,7 +92,7 @@ export class Collapsible extends React.PureComponent<CollapsibleProps, {
     });
   }
 
-  componentDidUpdate = (prevProps: CollapsibleProps) => {
+  componentDidUpdate = (prevProps: ExpandibleProps) => {
 
     if (this.state.shouldSwitchAutoOnNextCycle === true && this.state.isClosed === false) {
       //Set the height to auto to make compoenent re-render with the height set to auto.
@@ -172,9 +172,9 @@ export class Collapsible extends React.PureComponent<CollapsibleProps, {
         children = null;
 
     return (
-      <div className={this.props.classParentString}>
-        <div className={this.props.classParentString + "__contentOuter"} ref="outer" style={dropdownStyle}>
-          <div className={this.props.classParentString + "__contentInner"} ref="inner" children={children} />
+      <div className={this.props.parentClass}>
+        <div className={this.props.parentClass + "__contentOuter"} ref="outer" style={dropdownStyle}>
+          <div className={this.props.parentClass + "__contentInner"} ref="inner" children={children} />
         </div>
       </div>
     );

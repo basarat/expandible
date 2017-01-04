@@ -8,7 +8,9 @@
     "builddocs": "ts-node ./src/docs/main.tsx",
     "test": "npm run buildtsc && npm run builddocs",
     "start": "concurrently -k \"npm run buildtsc -- -w\" \"nodemon --watch src --ext ts,tsx --exec npm run builddocs\"",
-    "publishdocs": "ts-node ./scripts/publishdocs.ts"
+    "publishdocs": "ts-node ./scripts/publishdocs.ts",
+    "preversion": "npm run buildtsc",
+    "postversion": "git push --follow-tags && npm publish"
   },
   "author": "",
   "license": "MIT",

@@ -31,6 +31,10 @@ import {Expandible} from "expandible";
 </Expandible>
 ```
 
+## Demo 
+The above code is exactly how this works: 
+![](https://raw.githubusercontent.com/basarat/expandible/master/demo.gif)
+
 [travis-image]:https://travis-ci.org/basarat/expandible.svg?branch=master
 [travis-url]:https://travis-ci.org/basarat/expandible
 [npm-image]:https://img.shields.io/npm/v/expandible.svg?style=flat

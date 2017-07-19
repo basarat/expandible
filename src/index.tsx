@@ -81,7 +81,7 @@ export class Expandible extends React.PureComponent<ExpandibleProps, {
     inner?: HTMLDivElement
   };
 
-  componentDidMount = () => {
+  componentDidMount() {
     // Set up event listener to listen to transitionend so we can switch the height from fixed pixel to auto for much responsiveness;
     this.refs.outer.addEventListener(this.whichTransitionEnd(this.refs.outer), (event) => {
       if (this.state.isClosed === false) {
@@ -92,7 +92,7 @@ export class Expandible extends React.PureComponent<ExpandibleProps, {
     });
   }
 
-  componentDidUpdate = (prevProps: ExpandibleProps) => {
+  componentDidUpdate(prevProps: ExpandibleProps) {
 
     if (this.state.shouldSwitchAutoOnNextCycle === true && this.state.isClosed === false) {
       //Set the height to auto to make compoenent re-render with the height set to auto.

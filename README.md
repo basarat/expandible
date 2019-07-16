@@ -1,5 +1,7 @@
 # Expandible
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/basarat/expandible.svg)](https://greenkeeper.io/)
+
 > Making Expandibles / Collapsible / Accordian core easy ❤️
 
 [![Build Status][travis-image]][travis-url]
